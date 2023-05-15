@@ -1,0 +1,30 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1 {
+    text-align: center;
+    color: #9AA63F;
+}
+
+legend {
+    text-align: center;
+    color: #592B1B;
+    size: 50%;
+}
+
+.selection {
+    display: flex;
+    flex-direction: column-reverse ;
+    grid-column: 1;
+}
+
+.image-ingredient {
+    width: 150px;
+    height: 75px;
+}
+
+#Meat-button {
+    display: inline-grid;
+    grid-template-columns: auto auto auto;  
+}

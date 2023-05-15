@@ -1,0 +1,54 @@
+{
+    "ingredients": [
+        {
+            "type": "Chocolate, biscuit and sweet products",
+            "content": {
+                "Dark chocolate": "ingredients/chocolatAndCo/darkChocolat.jpg"
+            }
+        },
+        {
+            "type": "Vegetable",
+            "content": {
+                "Lettuce": "ingredients/vegetable/lettuce.jpg"
+            }
+        },
+        {
+            "type": "Fruits",
+            "content": {
+                "Apple": "ingredients/fruits/apple.jpg"
+            }
+        },
+        {
+            "type": "Eggs, cheese and dairy products",
+            "content": {
+                "Chicken egg": "ingredients/milk/chicken-egg.jpg"
+            }
+        },
+        {
+            "type": "Starchy food",
+            "content": {
+                "Potato": "ingredients/starchyFood/potato.jpg"
+            }
+        },
+        {
+            "type": "Herb, spice and condiment",
+            "content": {
+                "Basilic": "ingredients/herb/basilic.jpg"
+            }
+        },
+        {
+            "type": "Meat",
+            "content": {
+                "Beef": "ingredients/meat/beef.jpg",
+                "Pork": "ingredients/meat/pork.jpg",
+                "Chicken": "ingredients/meat/chicken.jpg"
+            }
+        },
+        {
+            "type": "Fish and seafood",
+            "content": {
+                "Tuna": "ingredients/fish/tuna.jpg"
+            }
+        }
+    ]
+}
