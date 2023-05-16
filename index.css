@@ -1,10 +1,125 @@
 * {
     font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 h1 {
     text-align: center;
     color: #9AA63F;
+}
+
+.nav-bar {
+    width: 100%;
+    box-shadow: 0 1px 4px rgb(146, 161, 176 / 15%);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 62px;
+}
+
+.nav-bar .menu-items {
+    display: flex;
+}
+
+.nav-bar .nav-container li {
+    list-style: none;
+}
+
+.nav-bar .nav-container a {
+    text-decoration: none;
+    color: #9AA63F;
+    font-weight: 500;
+    font-size: large;
+    padding: 0.7rem;
+}
+
+.nav-bar .nav-container a:hover {
+    font-weight: bolder;
+}
+
+.nav-container {
+    display: block;
+    position: relative;
+    height: 60px;
+}
+
+.nav-container .checkbox {
+    position: absolute;
+    display: block;
+    cursor: pointer;
+}
+
+.nav-container .hamburger-lines {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.nav-container .hamburger-lines .line {
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+    background-color: black;
+}
+
+.nav-container .hamburger-lines .line2 {
+    transition: transform 0.2s ease-in-out;
+}
+
+.nav-container .hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+}
+
+.nav-bar .menu-items {
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+    height: 100vh;
+    width: 100%;
+    transform: translate(-150%);
+    display: flex;
+    flex-direction: column;
+    margin-left: -40px;
+    padding-left: 50px;
+    transition: transform 0.5s ease-in-out;
+    text-align: center;
+}
+
+.nav-bar .menu-items li {
+    margin-bottom: 1.2rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.logo {
+    position: absolute;
+    color: blue;
+}
+
+.nav-container input[type="checkbox"]:checked~.menu-items {
+    transform: translateX(0);
+}
+
+.nav-container input[type="checkbox"]:checked~.hamburger-lines .line1 {
+    transform: rotate(45deg);
+}
+
+.nav-container input[type="checkbox"]:checked~.hamburger-lines .line2 {
+    transform: scaleY(0);
+}
+
+.nav-container input[type="checkbox"]:checked~.hamburger-lines .line3 {
+    transform: rotate(-45deg);
+}
+
+
+.nav-container input[type="checkbox"]:checked~.logo {
+    display: none;
 }
 
 legend {
@@ -15,7 +130,7 @@ legend {
 
 .selection {
     display: flex;
-    flex-direction: column-reverse ;
+    flex-direction: column-reverse;
     grid-column: 1;
 }
 
@@ -26,5 +141,5 @@ legend {
 
 #Meat-button {
     display: inline-grid;
-    grid-template-columns: auto auto auto;  
+    grid-template-columns: auto auto auto;
 }
