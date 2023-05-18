@@ -6,6 +6,7 @@
     <title>What do we eat tonight ?</title>
     <link rel="stylesheet" type="text/css" href="index.css">
     <link rel="shortcut icon" href="imageWebsite/logov2.ico" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="script.js">
 
     </script>
@@ -13,27 +14,24 @@
 
 <body onload="showList()">
     <nav>
-        <div class="nav-bar">
-            <div class="nav-container">
-                <input class="checkbox" type="checkbox" />
-                <div class="hamburger-lines">
-                    <span class="line" id="line1"></span>
-                    <span class="line" id="line2"></span>
-                    <span class="line" id="line3"></span>
-                </div>
-                <div class="logo">
-                    <h1>What do we eat tonight ?</h1>
-                </div>
-                <div class="menu-items">
-                    <li><a href="#">All receipes</a></li>
-                    <li><a href="#">Add ingredients</a></li>
-                    <li><a href="#">Add receipes</a></li>
-                    <li><a href="#">Favorite receipes></a></li>
-                </div>
-            </div>
+        <div class="sidenav" id="sidenav">
+            <a href="javascript:void(0);" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#allReceipes">All receipes</a>
+            <a href="#addIngredients">Add ingredients</a>
+            <a href="#addReceipes">Add receipes</a>
+            <a href="#favReceipes">Favorite receipes</a>
         </div>
+        <span onclick="openNav()" id="burger">&#9776;</span>
+        <script>
+            function openNav() {
+                document.getElementById("sidenav").style.width = "350px";
+            }
+            function closeNav() {
+                document.getElementById("sidenav").style.width = "0";
+            }
+        </script>
+        <h1>What do we eat tonight?</h1>
     </nav>
-
 </body>
 
 </html>
