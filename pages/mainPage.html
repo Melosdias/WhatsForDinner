@@ -16,18 +16,23 @@
     <nav>
         <div class="sidenav" id="sidenav">
             <a href="javascript:void(0);" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="#allReceipes">All receipes</a>
-            <a href="#addIngredients">Add ingredients</a>
-            <a href="#addReceipes">Add receipes</a>
-            <a href="#favReceipes">Favorite receipes</a>
+            <a href="allReceipes.html">All receipes</a>
+            <a href="addIngredient.html">Add ingredients</a>
+            <a href="addReceipe.html">Add receipes</a>
+            <a href="favReceipe.html">Favorite receipes</a>
         </div>
         <span onclick="openNav()" id="burger">&#9776;</span>
         <script>
             function openNav() {
+                console.log("openNav");
                 document.getElementById("sidenav").style.width = "350px";
+                document.getElementById("sidenav").style.borderRight = "2px solid #592B1B";
             }
             function closeNav() {
+                console.log("closeNav");
                 document.getElementById("sidenav").style.width = "0";
+                document.getElementById("sidenav").style.borderRight ="2px hidden #592B1B";
+                
             }
         </script>
         <h1>What do we eat tonight?</h1>

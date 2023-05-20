@@ -9,6 +9,7 @@ h1 {
     text-align: center;
     color: #2C8F69;
     margin: auto;
+    cursor: pointer;
 }
 
 nav {
@@ -125,6 +126,16 @@ legend {
 
 #submit-button {
     width: fit-content;
-    font-size: large;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: larger;
     margin: auto;
+    background-color: #277D5C;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#submit-button:hover{
+    background-color: #2C8F69;
 }
