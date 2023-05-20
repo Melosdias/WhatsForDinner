@@ -1,6 +1,6 @@
 function showList() {
     console.log("showList start");
-    fetch("ingredient.json")
+    fetch("../data/ingredient.json")
         .then(response => response.json())
         .then(data => createList(data))
 
@@ -32,7 +32,7 @@ function createList(data) {
             contentLI.innerHTML = key;
 
             const image = document.createElement('img');
-            image.src = data.ingredients[i].content[key];
+            image.src = "../" + data.ingredients[i].content[key];
             image.className = "image-ingredient";
             contentLI.appendChild(image);
 
