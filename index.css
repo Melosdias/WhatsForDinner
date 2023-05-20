@@ -17,7 +17,8 @@ nav{
     align-items: center;
     font-size: xx-large; 
 }
-.sidenav {
+/*Side menu*/
+.sidenav { /*Inside the side menu*/
     height: 100%;
     width: 0;
     position: fixed;
@@ -50,6 +51,23 @@ nav{
 #burger{
     font-size: xx-large;
 }
+
+/*Collapsibles*/
+.collapsible {
+    background-color: blue;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    outline: none;
+}
+.div-button {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #9AA63F;
+}
+
 legend {
     text-align: center;
     color: #592B1B;

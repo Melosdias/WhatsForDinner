@@ -12,11 +12,14 @@ function createList(data) {
     mainUL.appendChild(legendMainUL);
     for (let i = 0; i < data.ingredients.length; i++) {
         const bigDiv = document.createElement('div');
-        bigDiv.className = data.ingredients[i].type;                
-        const heading4 = document.createElement('h4');
-        heading4.innerHTML = data.ingredients[i].type;
+        bigDiv.className = data.ingredients[i].type;
+        const collapsButton = document.createElement('button');
+        collapsButton.type = 'button';
+        collapsButton.className = "collapsible";
+        collapsButton.innerHTML = data.ingredients[i].type;
 
         const divButton = document.createElement('div');
+        divButton.className = "div-button";
         divButton.id = data.ingredients[i].type + "-button";
         const contentUL = document.createElement('div');
         for (var key in data.ingredients[i].content) {
@@ -33,7 +36,7 @@ function createList(data) {
             contentUL.appendChild(contentLI);
         }
         divButton.appendChild(contentUL);
-        bigDiv.appendChild(heading4);
+        bigDiv.appendChild(collapsButton);
         bigDiv.appendChild(divButton);
         mainUL.appendChild(bigDiv);
     }
