@@ -1,0 +1,78 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    color: #2C8F69;
+    margin: auto;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content:left;
+    align-items: center;
+    font-size: xx-large; 
+    border-bottom: 3px solid #592B1B;
+}
+/*Side menu*/
+.sidenav { /*Inside the side menu*/
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index:1;
+    top: 0;
+    left :0;
+    background-color:#277D5C;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top:60px;
+    border-right: 2px solid #592B1B;
+}
+.sidenav a{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color:white;
+    display: block;
+    transition: 0.3s;
+}
+.sidenav a:hover{
+    font-weight: bolder;
+}
+.sidenav .closebtn{
+    position: absolute;
+    top:0;
+    right: 25px;
+    font-size:xx-large;
+    margin-left: 50px;
+}
+#burger{
+    font-size: xx-large;
+    cursor: pointer;
+    padding-left: 0.5%;
+    color: #592B1B;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+}
+.form {
+    display: flex;
+    flex-direction: row;
+}
+
+
+#ingredients-buttons {
+    display:grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto;
+}
+.ingredient-button {
+    width: 350px;
+    height: 50px;
+}

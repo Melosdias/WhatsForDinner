@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>What do we eat tonight ?</title>
+    <link rel="stylesheet" type="text/css" href="addIngredient.css">
+</head>
+
+<body>
+    <nav>
+        <div class="sidenav" id="sidenav">
+            <a href="javascript:void(0);" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#allReceipes">All receipes</a>
+            <a href="#addIngredients">Add ingredients</a>
+            <a href="#addReceipes">Add receipes</a>
+            <a href="#favReceipes">Favorite receipes</a>
+        </div>
+        <span onclick="openNav()" id="burger">&#9776;</span>
+        <script>
+            function openNav() {
+                document.getElementById("sidenav").style.width = "350px";
+            }
+            function closeNav() {
+                document.getElementById("sidenav").style.width = "0";
+            }
+        </script>
+        <h1>What do we eat tonight?</h1>
+    </nav>
+    <fieldset>
+        <legend>Add ingredients</legend>
+        <div class="form">
+            <label for="name">Name :</label>
+            <input type="text" id="name" value="Name" />
+        </div>
+        <p>Please select the type</p>
+        <div class="form" id="ingredients-buttons">
+            <input type="button" class="ingredient-button" id="sweet-product"
+                value="Chocolate, biscuit and sweet products">
+            <input type="button" class="ingredient-button" id="vegetable" value="Vegetable">
+            <input type="button" class="ingredient-button" id="fruits" value="Fruits">
+            <input type="button" class="ingredient-button" id="dairy-product" value="Eggs, cheese and dairy products">
+            <input type="button" class="ingredient-button" id="starchy-food" value="Starchy food">
+            <input type="button" class="ingredient-button" id="condiment" value="Herb, spice and condiment">
+            <input type="button" class="ingredient-button" id="meat" value="Meat">
+            <input type="button" class="ingredient-button" id="seafood" value="Fish and seafood">
+        </div>
+        <input type="button" id="submit-button" value="Add ingredient">
+    </fieldset>
+
+</body>
+
+</html>
