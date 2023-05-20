@@ -7,7 +7,7 @@
 
 h1 {
     text-align: center;
-    color: #9AA63F;
+    color: #2C8F69;
     margin: auto;
 }
 nav{
@@ -25,7 +25,7 @@ nav{
     z-index:1;
     top: 0;
     left :0;
-    background-color:#9AA63F;
+    background-color:#277D5C;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top:60px;
@@ -50,41 +50,101 @@ nav{
 }
 #burger{
     font-size: xx-large;
+    cursor: pointer;
+    padding-left: 0.5%;
 }
 
 /*Collapsibles*/
 .collapsible {
-    background-color: blue;
+    background-color: #2C8F69;
+    color: white;
     cursor: pointer;
     padding: 18px;
     width: 100%;
+    border-radius: 10px;
+    /*border: 1px solid white;*/
     border: none;
     outline: none;
+    font-size: larger;
+    font-weight: bold;
+}
+.collapsible:hover {
+    background-color: #277D5C;
+}
+.collapsible:after{
+    content: '\25BC'; /*Black Down-Pointing Triangle*/
+    color: white;
+    font-weight: bolder;
+    float: right;
+    margin-left: 5px;
+}
+.active {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+.active:after{
+    content: '\25B2';/*Black Up-Pointing Triangle*/
 }
 .div-button {
     padding: 0 18px;
-    display: none;
+    /*display: none;*/
     overflow: hidden;
-    background-color: #9AA63F;
+    background-color: #277D5C;
+    width: 100%;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+    justify-content: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.ingredient {
+    margin-bottom: 10px;
+    border-radius: 10px;
 }
 
-legend {
-    text-align: center;
+
+legend {/*"choose your ingredient'*/
     color: #592B1B;
+    font-size: larger;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-weight: bold;
 }
 
 .selection {
     display: flex;
     flex-direction: column-reverse;
     grid-column: 1;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #592B1B;
+    font-size: large;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .image-ingredient {
     width: 150px;
     height: 75px;
 }
-
-#Meat-button {
-    display: inline-grid;
-    grid-template-columns: auto auto auto;
+fieldset{
+    text-align: center;
+    border: none;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#submit-button {
+    width: fit-content;
+    font-size:x-large;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #2C8F69;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
 }
