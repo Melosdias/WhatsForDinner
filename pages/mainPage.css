@@ -149,4 +149,11 @@ fieldset{
     color: white;
     border-radius: 10px;
     cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#submit-button:hover{
+    background-color: #277D5C;
 }

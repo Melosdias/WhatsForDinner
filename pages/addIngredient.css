@@ -130,12 +130,12 @@ legend {
     padding-right: 10px;
     font-size: larger;
     margin: auto;
-    background-color: #277D5C;
     color: white;
+    background-color: #2C8F69;
     border: none;
     border-radius: 10px;
     cursor: pointer;
 }
 #submit-button:hover{
-    background-color: #2C8F69;
+    background-color: #277D5C;
 }

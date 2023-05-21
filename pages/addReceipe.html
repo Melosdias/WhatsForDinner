@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>What do we eat tonight ?</title>
+    <link rel="stylesheet" type="text/css" href="addReceipe.css">
+    <link rel="shortcut icon" href="../imageWebsite/logov2.ico" />
+    <script src="addReceipe.js"></script>
+</head>
+
+<body onload="showList()">
+    <nav>
+        <div class="sidenav" id="sidenav">
+            <a href="javascript:void(0);" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="allReceipes.html">All receipes</a>
+            <a href="addIngredient.html">Add ingredients</a>
+            <a href="addReceipe.html">Add receipes</a>
+            <a href="favReceipe.html">Favorite receipes</a>
+        </div>
+        <span onclick="openNav()" id="burger">&#9776;</span>
+        <h1 onclick="mainPage()">What do we eat tonight?</h1>
+        <script>
+            function openNav() {
+                document.getElementById("sidenav").style.width = "350px";
+                document.getElementById("sidenav").style.borderRight = "2px solid #592B1B";
+            }
+            function closeNav() {
+                document.getElementById("sidenav").style.width = "0";
+                document.getElementById("sidenav").style.borderRight = "2px hidden #592B1B";
+            }
+            function mainPage() {
+                location.replace("mainPage.html");
+            }
+        </script>
+    </nav>
+    <fieldset>
+        <legend>Add receipe</legend>
+        <div class="form" id="name-input">
+            <label for="name">First, write the name of the receipe :</label>
+            <input type="text" id="name" value="" />
+        </div>
+        <div id="ingredient-selection">
+            <p>Now select the needed ingredients : </p>
+        </div>
+        <div id="steps">
+            <p>Now write all the steps :</p>
+            <div class="form" id="step">
+                <label for="step1">Step 1 : </label>
+                <textarea id="step1" class="step-input" value="">
+                </textarea>
+            </div>
+            <div class="form" id="step">
+                <label for="step2">Step 2 : </label>
+                <textarea id="step1" class="step-input" value="">
+                </textarea>
+            </div>
+        </div>
+        <input type="button" id="add-step-button" value="Add step" onclick="addStep()">
+        <div class="buttons">
+            <input type="button" id="submit-button" value="Add receipe" onclick="submit()">
+        </div>
+        <script>
+            var nbStep = 2;
+            function addStep() {
+                nbStep++;
+                const nextStepDiv = document.createElement('div');
+                nextStepDiv.className = "form";
+                nextStepDiv.id = "step";
+                const inputStep = document.createElement('textarea');
+                inputStep.type = "text";
+                inputStep.id = "step" + nbStep;
+                inputStep.className = "step-input";
+                const labelStep = document.createElement('label');
+                labelStep.htmlFor = inputStep.id;
+                labelStep.innerHTML = "Step " + nbStep + " : ";
+
+                const bigDiv = document.getElementById("steps");
+                nextStepDiv.appendChild(labelStep);
+                nextStepDiv.appendChild(inputStep);
+                bigDiv.appendChild(nextStepDiv);
+                if (nbStep >= 10) {
+                    const addStepButton = document.getElementById("add-step-button");
+                    addStepButton.style.visibility = 'hidden';
+                }
+            }
+            function submit()
+            {
+                alert("Thank you~");
+            }
+        </script>
+    </fieldset>
+
+</body>
+
+</html>
