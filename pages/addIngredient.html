@@ -25,13 +25,12 @@
             }
             function closeNav() {
                 document.getElementById("sidenav").style.width = "0";
-                document.getElementById("sidenav").style.borderRight ="2px hidden #592B1B";
+                document.getElementById("sidenav").style.borderRight = "2px hidden #592B1B";
             }
         </script>
         <h1 onclick="mainPage()">What do we eat tonight?</h1>
         <script>
-            function mainPage()
-            {
+            function mainPage() {
                 location.replace("mainPage.html");
             }
         </script>
@@ -55,37 +54,56 @@
                 <input type="checkbox" class="ingredient-button" id="vegetable" value="Vegetable">
             </div>
             <div id="ingredients-buttons">
-
                 <label for="fruits">Fruits</label>
                 <input type="checkbox" class="ingredient-button" id="fruits" value="Fruits">
-
             </div>
             <div id="ingredients-buttons">
-
                 <label for="dairy-product">Eggs, cheese and dairy products</label>
                 <input type="checkbox" class="ingredient-button" id="dairy-product"
                     value="Eggs, cheese and dairy products">
             </div>
             <div id="ingredients-buttons">
-
                 <label for="starchy-food">Starchy food</label>
                 <input type="checkbox" class="ingredient-button" id="starchy-food" value="Starchy food">
             </div>
             <div id="ingredients-buttons">
-
                 <label for="condiment">Herb, spice and condiment</label>
                 <input type="checkbox" class="ingredient-button" id="condiment" value="Herb, spice and condiment">
             </div>
             <div id="ingredients-buttons">
-
                 <label for="meat">Meat</label>
                 <input type="checkbox" class="ingredient-button" id="meat" value="Meat">
             </div>
             <div id="ingredients-buttons">
-
                 <label for="seafood">Fish and seafood</label>
                 <input type="checkbox" class="ingredient-button" id="seafood" value="Fish and seafood">
             </div>
+        </div>
+        <div class="form">
+            <label for="picture-button">Please add a picture : </label>
+            <input type="file" id="choose-file" accept="image/*"/>
+            <div id="img-preview"></div>
+            <script>
+                const chooseFile = document.getElementById("choose-file");
+                const imgPreview = document.getElementById("img-preview");
+                chooseFile.addEventListener("change", function() {
+                    getImgData();
+                });
+                function getImgData() {
+                    const files = chooseFile.files[0];
+                    if(files){
+                        const fileReader = new FileReader();
+                        fileReader.readAsDataURL(files);
+                        fileReader.addEventListener("load", function() {
+                            imgPreview.style.display = "block";
+                            imgPreview.innerHTML = '';
+                            const image = document.createElement('img');
+                            image.src = this.result;
+                            imgPreview.appendChild(image);
+                        });
+                    }
+                }
+            </script>
         </div>
         <input type="button" id="submit-button" value="Add ingredient">
     </fieldset>

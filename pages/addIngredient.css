@@ -90,6 +90,21 @@ legend {
     font-weight: bold;
 }
 
+#picture-button {
+    width: fit-content;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 10px;
+    font-size: larger;
+    color: white;
+    background-color: #2C8F69;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#picture-button:hover{
+    background-color: #277D5C;
+}
 
 .name-input {
     font-size: large;
@@ -105,14 +120,16 @@ legend {
     display: flex;
     flex-direction: row-reverse;
     justify-content: left;
-    align-items:center;
+    align-items: center;
 }
+
 #all-buttons {
     display: grid;
     grid-template-columns: auto auto;
 }
+
 .ingredient-button {
-    width:25px;
+    width: 25px;
     height: 40px;
     background-color: #277D5C;
     color: white;
@@ -136,6 +153,7 @@ legend {
     border-radius: 10px;
     cursor: pointer;
 }
-#submit-button:hover{
+
+#submit-button:hover {
     background-color: #277D5C;
 }

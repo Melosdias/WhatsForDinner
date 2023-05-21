@@ -57,6 +57,11 @@
             </div>
         </div>
         <input type="button" id="add-step-button" value="Add step" onclick="addStep()">
+        <div class="form>">
+            <label for="picture-button">Please add a picture : </label>
+            <input type="file" id="choose-file" accept="image/*" />
+            <div id="img-preview"></div>
+        </div>
         <div class="buttons">
             <input type="button" id="submit-button" value="Add receipe" onclick="submit()">
         </div>
@@ -84,10 +89,30 @@
                     addStepButton.style.visibility = 'hidden';
                 }
             }
-            function submit()
-            {
+            function submit() {
                 alert("Thank you~");
             }
+
+            const chooseFile = document.getElementById("choose-file");
+            const imgPreview = document.getElementById("img-preview");
+            chooseFile.addEventListener("change", function () {
+                getImgData();
+            });
+            function getImgData() {
+                const files = chooseFile.files[0];
+                if (files) {
+                    const fileReader = new FileReader();
+                    fileReader.readAsDataURL(files);
+                    fileReader.addEventListener("load", function () {
+                        imgPreview.style.display = "block";
+                        imgPreview.innerHTML = '';
+                        const image = document.createElement('img');
+                        image.src = this.result;
+                        imgPreview.appendChild(image);
+                    });
+                }
+            }
+
         </script>
     </fieldset>
 
