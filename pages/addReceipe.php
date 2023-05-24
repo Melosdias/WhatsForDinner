@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,31 +13,8 @@
 </head>
 
 <body onload="showList()">
-    <nav>
-        <div class="sidenav" id="sidenav">
-            <a href="javascript:void(0);" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="allReceipes.html">All receipes</a>
-            <a href="addIngredient.html">Add ingredients</a>
-            <a href="addReceipe.html">Add receipes</a>
-            <a href="favReceipe.html">Favorite receipes</a>
-        </div>
-        <span onclick="openNav()" id="burger">&#9776;</span>
-        <h1 onclick="mainPage()">What do we eat tonight?</h1>
-        <script>
-            function openNav() {
-                document.getElementById("sidenav").style.width = "350px";
-                document.getElementById("sidenav").style.borderRight = "2px solid #592B1B";
-            }
-            function closeNav() {
-                document.getElementById("sidenav").style.width = "0";
-                document.getElementById("sidenav").style.borderRight = "2px hidden #592B1B";
-            }
-            function mainPage() {
-                location.replace("mainPage.html");
-            }
-        </script>
-    </nav>
-    <fieldset>
+    <?php include 'sideMenu.php';?>
+        <fieldset>
         <legend>Add receipe</legend>
         <div class="form" id="name-input">
             <label for="name">First, write the name of the receipe :</label>

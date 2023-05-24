@@ -21,7 +21,7 @@ nav {
     border-bottom: 3px solid #592B1B;
 }
 
-/*Side menu*/
+/*#region Side menu*/
 .sidenav {
     /*Inside the side menu*/
     height: 100%;
@@ -64,7 +64,7 @@ nav {
     padding-left: 0.5%;
     color: #592B1B;
 }
-
+/*#endregion*/
 fieldset {
     display: flex;
     flex-direction: column;
@@ -156,4 +156,13 @@ legend {
 
 #submit-button:hover {
     background-color: #277D5C;
+}
+
+#add-image{
+    display: flex;
+    flex-direction: column;
+}
+#image {
+    width: 250px;
+    height: 150px;
 }

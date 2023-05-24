@@ -9,6 +9,7 @@ h1 {
     text-align: center;
     color: #2C8F69;
     margin: auto;
+    cursor: pointer;
 }
 h3 {
     padding-top: 10px;

@@ -233,3 +233,11 @@ p{
 }
 
 /*#endregion*/
+#add-image{
+    display: flex;
+    flex-direction: column;
+}
+#image {
+    width: 250px;
+    height: 150px;
+}

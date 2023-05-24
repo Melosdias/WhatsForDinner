@@ -17,7 +17,7 @@ function createList(data) {
         const aside = document.createElement('aside');
         aside.id = data.receipes[i].name;
         const picture = document.createElement('img');
-        picture.src = "../" + data.receipes[i].picture;
+        picture.src =  data.receipes[i].picture;
         picture.className = "image-receipe";
         aside.appendChild(picture);
 

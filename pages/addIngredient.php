@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,32 +12,7 @@
 </head>
 
 <body>
-    <nav>
-        <div class="sidenav" id="sidenav">
-            <a href="javascript:void(0);" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="allReceipes.html">All receipes</a>
-            <a href="addIngredient.html">Add ingredients</a>
-            <a href="addReceipe.html">Add receipes</a>
-            <a href="favReceipe.html">Favorite receipes</a>
-        </div>
-        <span onclick="openNav()" id="burger">&#9776;</span>
-        <script>
-            function openNav() {
-                document.getElementById("sidenav").style.width = "350px";
-                document.getElementById("sidenav").style.borderRight = "2px solid #592B1B";
-            }
-            function closeNav() {
-                document.getElementById("sidenav").style.width = "0";
-                document.getElementById("sidenav").style.borderRight = "2px hidden #592B1B";
-            }
-        </script>
-        <h1 onclick="mainPage()">What do we eat tonight?</h1>
-        <script>
-            function mainPage() {
-                location.replace("mainPage.html");
-            }
-        </script>
-    </nav>
+    <?php include 'sideMenu.php'; ?>
     <fieldset>
         <legend>Add ingredients</legend>
         <div class="form" id="name-input">
@@ -79,26 +57,28 @@
                 <input type="checkbox" class="ingredient-button" id="seafood" value="Fish and seafood">
             </div>
         </div>
-        <div class="form">
-            <label for="picture-button">Please add a picture : </label>
-            <input type="file" id="choose-file" accept="image/*"/>
+        <div class="form" id="add-image">
+            <div>
+                <label for="picture-button">Please add a picture : </label>
+                <input type="file" id="choose-file" accept="image/*" />
+            </div>
             <div id="img-preview"></div>
             <script>
                 const chooseFile = document.getElementById("choose-file");
                 const imgPreview = document.getElementById("img-preview");
-                chooseFile.addEventListener("change", function() {
+                chooseFile.addEventListener("change", function () {
                     getImgData();
                 });
                 function getImgData() {
                     const files = chooseFile.files[0];
-                    if(files){
+                    if (files) {
                         const fileReader = new FileReader();
                         fileReader.readAsDataURL(files);
-                        fileReader.addEventListener("load", function() {
-                            imgPreview.style.display = "block";
+                        fileReader.addEventListener("load", function () {
                             imgPreview.innerHTML = '';
                             const image = document.createElement('img');
                             image.src = this.result;
+                            image.id = "image";
                             imgPreview.appendChild(image);
                         });
                     }
