@@ -65,9 +65,7 @@ nav {
     color: #592B1B;
 }
 /*#endregion*/
-fieldset {
-    display: flex;
-    flex-direction: column;
+form {
     border: none;
     width: 80%;
     margin-left: auto;

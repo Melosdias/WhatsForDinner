@@ -13,54 +13,51 @@ session_start();
 
 <body>
     <?php include 'sideMenu.php'; ?>
-    <fieldset>
+    <form action="sendIngredient.php" method="post" enctype="multipart/form-data">
         <legend>Add ingredients</legend>
-        <div class="form" id="name-input">
-            <label for="name">Name :</label>
-            <input type="text" id="name" value="" />
-        </div>
+            Name : <input type="text" id="name" name="name" value="" />
         <p>Please select the type :
         </p>
         <div class="form" id="all-buttons">
             <div id="ingredients-buttons">
-                <label for="sweet-product">Chocolate, biscuit and sweet products</label>
-                <input type="checkbox" class="ingredient-button" id="sweet-product"
-                    value="Chocolate, biscuit and sweet products">
+                Chocolate, biscuit and sweet products<input type="checkbox" class="ingredient-button" id="sweet-product" name="SWEET-PRODUCT"
+                    value="Chocolate, biscuit and sweet products"> 
             </div>
             <div id="ingredients-buttons">
-                <label for="vegetable">Vegetable</label>
-                <input type="checkbox" class="ingredient-button" id="vegetable" value="Vegetable">
+               Vegetable <input type="checkbox" class="ingredient-button" id="vegetable" name="VEGETABLE" value="Vegetable">
             </div>
             <div id="ingredients-buttons">
-                <label for="fruits">Fruits</label>
-                <input type="checkbox" class="ingredient-button" id="fruits" value="Fruits">
+                Fruits
+                <input type="checkbox" class="ingredient-button" id="fruits" name="FRUITS" value="Fruits">
             </div>
             <div id="ingredients-buttons">
-                <label for="dairy-product">Eggs, cheese and dairy products</label>
-                <input type="checkbox" class="ingredient-button" id="dairy-product"
+                Eggs, cheese and dairy products
+                <input type="checkbox" class="ingredient-button" id="dairy-product" name="DAIRY-PRODUCT"
                     value="Eggs, cheese and dairy products">
             </div>
             <div id="ingredients-buttons">
-                <label for="starchy-food">Starchy food</label>
-                <input type="checkbox" class="ingredient-button" id="starchy-food" value="Starchy food">
+               Starchy food
+                <input type="checkbox" class="ingredient-button" name="STARCHY-FOOD" id="starchy-food"
+                    value="Starchy food">
             </div>
             <div id="ingredients-buttons">
-                <label for="condiment">Herb, spice and condiment</label>
-                <input type="checkbox" class="ingredient-button" id="condiment" value="Herb, spice and condiment">
+                Herb, spice and condiment
+                <input type="checkbox" class="ingredient-button" name="CONDIMENT" id="condiment"
+                    value="Herb, spice and condiment">
             </div>
             <div id="ingredients-buttons">
-                <label for="meat">Meat</label>
-                <input type="checkbox" class="ingredient-button" id="meat" value="Meat">
+                Meat
+                <input type="checkbox" class="ingredient-button" name="MEAT" id="meat" value="Meat">
             </div>
             <div id="ingredients-buttons">
                 <label for="seafood">Fish and seafood</label>
-                <input type="checkbox" class="ingredient-button" id="seafood" value="Fish and seafood">
+                <input type="checkbox" class="ingredient-button" name="SEAFOOD" id="seafood" value="Fish and seafood">
             </div>
         </div>
         <div class="form" id="add-image">
             <div>
                 <label for="picture-button">Please add a picture : </label>
-                <input type="file" id="choose-file" accept="image/*" />
+                <input type="file" id="choose-file" name="image" accept="image/*" />
             </div>
             <div id="img-preview"></div>
             <script>
@@ -79,15 +76,16 @@ session_start();
                             const image = document.createElement('img');
                             image.src = this.result;
                             image.id = "image";
+                            image.name= "image";
                             imgPreview.appendChild(image);
                         });
                     }
                 }
             </script>
         </div>
-        <input type="button" id="submit-button" value="Add ingredient">
-    </fieldset>
-
+        <input type="submit" id="submit-button" value="Add ingredient">
+    </form>
+  
 </body>
 
 </html>
