@@ -1,7 +1,5 @@
 <?php
 $db = mysqli_connect('localhost', 'root', '') or die('Unable to connect. Check your connection parameters.');
-$query = 'CREATE DATABASE IF NOT EXISTS cooking';
-mysqli_query($db, $query);
 mysqli_select_db($db, "cooking") or die(mysqli_error($db));
 
 $query = 'CREATE TABLE IF NOT EXISTS ingredient (
@@ -14,6 +12,7 @@ $query = 'CREATE TABLE IF NOT EXISTS ingredient (
     )
     ENGINE=MyISAM';
 mysqli_query($db, $query) or die(mysqli_error($db));
+
 
 $query = 'CREATE TABLE IF NOT EXISTS receipes (
     receipes_id         INTEGER UNSIGNED    NOT NULL AUTO_INCREMENT,
