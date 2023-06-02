@@ -22,7 +22,7 @@ nav {
 }
 
 @media only screen and (min-width:768px) {
-    #first-form {
+    form {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -81,26 +81,6 @@ nav {
         background-color: #2c8f62;
         margin: auto;
         margin-top: 10px;
-    }
-
-    #second-form {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    #sign-up-button {
-        color: white;
-        text-decoration: underline;
-    }
-
-    #sign-up-button:hover {
-        font-weight: bolder;
-    }
-
-    .div-submit-button {
-        background-color: white;
-        display: flex;
     }
 
     section {
@@ -125,7 +105,7 @@ nav {
 }
 
 @media only screen and (min-width:480px) and (max-width:768px) {
-    #first-form {
+    form {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -157,6 +137,8 @@ nav {
         color: #592B1B;
         font-weight: bold;
         text-align: center;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
     }
 
     div {
@@ -166,8 +148,7 @@ nav {
         margin-top: 5px;
     }
 
-    #submit-button,
-    #sign-up-button {
+    #submit-button{
         background-color: #277D5C;
         width: fit-content;
         padding-left: 10px;
@@ -186,29 +167,11 @@ nav {
         margin-top: 10px;
     }
 
-    #second-form {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    #sign-up-button {
-        color: white;
-        text-decoration: underline;
-    }
-
-    #sign-up-button:hover {
-        font-weight: bolder;
-    }
-
-    .div-submit-button {
-        background-color: white;
-        display: flex;
-    }
 
     section {
         background-color: white;
-        border-radius: 8px;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
         display: flex;
         align-items: center;
         flex-direction: column;
@@ -228,7 +191,7 @@ nav {
 }
 
 @media only screen and (max-width:480px) {
-    #first-form {
+    form {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -254,12 +217,16 @@ nav {
 
     legend {
         background-color: white;
-        padding-top: 20px;
-        padding-bottom: 20px;
+        margin-top: 5px;
+        padding-top: 10px;
+        padding-bottom: 10px;
         font-size: larger;
         color: #592B1B;
         font-weight: bold;
         text-align: center;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+
     }
 
     div {
@@ -311,12 +278,11 @@ nav {
 
     section {
         background-color: white;
-        border-radius: 8px;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
         display: flex;
         align-items: center;
         flex-direction: column;
-        padding-left: 10px;
-        padding-right: 10px;
         padding-top: 10px;
         padding-bottom: 10px;
         font-size: larger;
@@ -327,5 +293,6 @@ nav {
         background-color: white;
         height: 25px;
         font-size: large;
+        width: 70%;
     }
 }

@@ -21,10 +21,12 @@ if (empty(mysqli_fetch_array($result))) {
     $_SESSION['username'] = $username;
     $_SESSION['password'] =$password;
     $_SESSION['authuser'] = 1;
-    include 'connectionPage.php';
+    header('Location:connectionPage.php');
+    exit();
 } else {
     $_SESSION['authuser'] = 0;
     setcookie("user", $username, time()+3600);
-    include 'mainPage.php';
+    header('Location:mainPage.php');
+    exit();
 }
 ?>

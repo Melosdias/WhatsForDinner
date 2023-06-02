@@ -33,7 +33,7 @@ while ($row = mysqli_fetch_array($result)) {
                     <aside id=\"$receipes_name\">
                         <img src=\"$receipes_image\" class=\"image-receipe\">
                         <form action=\"addFav.php\" method=\"post\">
-                            <input type=\"submit\" value=\"Add to favorite\" name=\"$receipes_name\">
+                            <input type=\"submit\" id=\"fav-button\" value=\"Add to favorite\" name=\"$receipes_name\">
                         </form>
                     </aside>
                     <article id=\"$receipes_name\">

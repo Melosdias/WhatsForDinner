@@ -9,6 +9,7 @@ include 'createDatabaseUser.php';
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>What do we eat tonight ?</title>
     <link rel="stylesheet" type="text/css" href="connectionPage.css">
     <link rel="shortcut icon" href="../imageWebsite/logov2.ico" />
@@ -19,17 +20,19 @@ include 'createDatabaseUser.php';
 </nav>
 
 <body>
-    <form action="connection.php" method="post" enctype="multipart/form-data">
-        <legend>Welcome<br/>Please login</legend>
-        <div>
-            Username : <input type="text" id="username" name="username" />
-        </div>
-        <div>
-            Password : <input type="password" id="password" name="password" />
-        </div>
+    <form action="connection.php" id="first-form" method="post" enctype="multipart/form-data">
+        <legend>LOGIN</legend>
+        <section>
+            <div>
+                Username : <input type="text" id="username" name="username" />
+            </div>
+            <div>
+                Password : <input type="password" id="password" name="password" />
+            </div>
         <input type="submit" id="submit-button" value="Connexion">
+        </section>
     </form>
-    <form action="createUserPage.php" method="post" enctype="multipart/form-data">
+    <form action="createUserPage.php" id="second-form" method="post" enctype="multipart/form-data">
         <input type="submit" id="sign-up-button" value="Sign up">
     </form>
 </body>

@@ -24,10 +24,11 @@ if (empty(mysqli_fetch_array($result))) {
     echo "<script>
             alert(\"You have been sign up. Please login\");
             </script>";
-    include 'connectionPage.php';
+    header('Location:connectionPage.php');
+    exit();
 } else {
     echo "<script>
             alert(\"This username is not availaible\");
+            window.location.href=\"createUserPage.php\";
             </script>";
-    include 'createUser.php';
 }
