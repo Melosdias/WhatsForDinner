@@ -22,7 +22,7 @@ include 'createDatabase.php';
     <?php
     include 'sideMenu.php';
     ?>
-    <fieldset id="fieldset">
+    <form action="getReceipes.php" method="post" enctype="mutlipart/form-data" id="fieldset">
         <legend> Choose your ingredient </legend>
         <div id="Chocolate, biscuit and sweet products" class="ingredient">
             <button id="Chocolate, biscuit and sweet products" class="collapsible" type="button">
@@ -33,7 +33,7 @@ include 'createDatabase.php';
                 $db = mysqli_connect('localhost', 'root', '') or die('Unable to connect. Check your connection parameters.');
                 mysqli_select_db($db, 'cooking') or die(mysqli_error($db));
                 $query = 'SELECT 
-                                ingredient_name, ingredient_type, ingredient_image
+                                ingredient_id, ingredient_name, ingredient_type, ingredient_image
                             FROM ingredient
                             WHERE ingredient_type = \'SWEET-PRODUCT\'
                             ORDER BY ingredient_name';
@@ -41,7 +41,7 @@ include 'createDatabase.php';
                 while ($row = mysqli_fetch_array($AllIngredients)) {
                     extract($row);
                     echo "<div class=\"container\">
-                                <input type=\"checkbox\" class=\"selection\" id=$ingredient_name>
+                                <input type=\"checkbox\" class=\"selection\" name=$ingredient_id id=$ingredient_name>
                                 <label for=$ingredient_name id=\"label-checkbox\"><img src=$ingredient_image class=\"image-ingredient\">$ingredient_name</label>
                             </div>";
                 }
@@ -58,7 +58,7 @@ include 'createDatabase.php';
                 $db = mysqli_connect('localhost', 'root', '') or die('Unable to connect. Check your connection parameters.');
                 mysqli_select_db($db, 'cooking') or die(mysqli_error($db));
                 $query = 'SELECT 
-                                ingredient_name, ingredient_type, ingredient_image
+                                ingredient_id, ingredient_name, ingredient_type, ingredient_image
                             FROM ingredient
                             WHERE ingredient_type = \'VEGETABLE\'
                             ORDER BY ingredient_name';
@@ -66,7 +66,7 @@ include 'createDatabase.php';
                 while ($row = mysqli_fetch_array($AllIngredients)) {
                     extract($row);
                     echo "<div class=\"container\">
-                                <input type=\"checkbox\" class=\"selection\" id=$ingredient_name>
+                                <input type=\"checkbox\" class=\"selection\" name=$ingredient_id id=$ingredient_name>
                                 <label for=$ingredient_name id=\"label-checkbox\"><img src=$ingredient_image class=\"image-ingredient\">$ingredient_name</label>
                             </div>";
                 }
@@ -83,7 +83,7 @@ include 'createDatabase.php';
                 $db = mysqli_connect('localhost', 'root', '') or die('Unable to connect. Check your connection parameters.');
                 mysqli_select_db($db, 'cooking') or die(mysqli_error($db));
                 $query = 'SELECT 
-                                ingredient_name, ingredient_type, ingredient_image
+                                ingredient_id, ingredient_name, ingredient_type, ingredient_image
                             FROM ingredient
                             WHERE ingredient_type = \'FRUITS\'
                             ORDER BY ingredient_name';
@@ -91,7 +91,7 @@ include 'createDatabase.php';
                 while ($row = mysqli_fetch_array($AllIngredients)) {
                     extract($row);
                     echo "<div class=\"container\">
-                                <input type=\"checkbox\" class=\"selection\" id=$ingredient_name>
+                                <input type=\"checkbox\" class=\"selection\" name=$ingredient_id id=$ingredient_name>
                                 <label for=$ingredient_name id=\"label-checkbox\"><img src=$ingredient_image class=\"image-ingredient\">$ingredient_name</label>
                             </div>";
                 }
@@ -107,7 +107,7 @@ include 'createDatabase.php';
                 $db = mysqli_connect('localhost', 'root', '') or die('Unable to connect. Check your connection parameters.');
                 mysqli_select_db($db, 'cooking') or die(mysqli_error($db));
                 $query = 'SELECT 
-                                ingredient_name, ingredient_type, ingredient_image
+                                ingredient_id, ingredient_name, ingredient_type, ingredient_image
                             FROM ingredient
                             WHERE ingredient_type = \'DAIRY-PRODUCT\'
                             ORDER BY ingredient_name';
@@ -115,7 +115,7 @@ include 'createDatabase.php';
                 while ($row = mysqli_fetch_array($AllIngredients)) {
                     extract($row);
                     echo "<div class=\"container\">
-                                <input type=\"checkbox\" class=\"selection\" id=$ingredient_name>
+                                <input type=\"checkbox\" class=\"selection\" name=$ingredient_id id=$ingredient_name>
                                 <label for=$ingredient_name id=\"label-checkbox\"><img src=$ingredient_image class=\"image-ingredient\">$ingredient_name</label>
                             </div>";
                 }
@@ -131,7 +131,7 @@ include 'createDatabase.php';
                 $db = mysqli_connect('localhost', 'root', '') or die('Unable to connect. Check your connection parameters.');
                 mysqli_select_db($db, 'cooking') or die(mysqli_error($db));
                 $query = 'SELECT 
-                                ingredient_name, ingredient_type, ingredient_image
+                                ingredient_id, ingredient_name, ingredient_type, ingredient_image
                             FROM ingredient
                             WHERE ingredient_type = \'STARCHY-FOOD\'
                             ORDER BY ingredient_name';
@@ -139,7 +139,7 @@ include 'createDatabase.php';
                 while ($row = mysqli_fetch_array($AllIngredients)) {
                     extract($row);
                     echo "<div class=\"container\">
-                                <input type=\"checkbox\" class=\"selection\" id=$ingredient_name>
+                                <input type=\"checkbox\" class=\"selection\" name=$ingredient_id id=$ingredient_name>
                                 <label for=$ingredient_name id=\"label-checkbox\"><img src=$ingredient_image class=\"image-ingredient\">$ingredient_name</label>
                             </div>";
                 }
@@ -155,7 +155,7 @@ include 'createDatabase.php';
                 $db = mysqli_connect('localhost', 'root', '') or die('Unable to connect. Check your connection parameters.');
                 mysqli_select_db($db, 'cooking') or die(mysqli_error($db));
                 $query = 'SELECT 
-                                ingredient_name, ingredient_type, ingredient_image
+                                ingredient_id, ingredient_name, ingredient_type, ingredient_image
                             FROM ingredient
                             WHERE ingredient_type = \'CONDIMENT\'
                             ORDER BY ingredient_name';
@@ -163,7 +163,7 @@ include 'createDatabase.php';
                 while ($row = mysqli_fetch_array($AllIngredients)) {
                     extract($row);
                     echo "<div class=\"container\">
-                                <input type=\"checkbox\" class=\"selection\" id=$ingredient_name>
+                                <input type=\"checkbox\" class=\"selection\" name=$ingredient_id id=$ingredient_name>
                                 <label for=$ingredient_name id=\"label-checkbox\"><img src=$ingredient_image class=\"image-ingredient\">$ingredient_name</label>
                             </div>";
                 }
@@ -179,7 +179,7 @@ include 'createDatabase.php';
                 $db = mysqli_connect('localhost', 'root', '') or die('Unable to connect. Check your connection parameters.');
                 mysqli_select_db($db, 'cooking') or die(mysqli_error($db));
                 $query = 'SELECT 
-                                ingredient_name, ingredient_type, ingredient_image
+                                ingredient_id, ingredient_name, ingredient_type, ingredient_image
                             FROM ingredient
                             WHERE ingredient_type = \'MEAT\'
                             ORDER BY ingredient_name';
@@ -187,7 +187,7 @@ include 'createDatabase.php';
                 while ($row = mysqli_fetch_array($AllIngredients)) {
                     extract($row);
                     echo "<div class=\"container\">
-                                <input type=\"checkbox\" class=\"selection\" id=$ingredient_name>
+                                <input type=\"checkbox\" class=\"selection\" name=$ingredient_id id=$ingredient_name>
                                 <label for=$ingredient_name id=\"label-checkbox\"><img src=$ingredient_image class=\"image-ingredient\">$ingredient_name</label>
                             </div>";
                 }
@@ -203,7 +203,7 @@ include 'createDatabase.php';
                 $db = mysqli_connect('localhost', 'root', '') or die('Unable to connect. Check your connection parameters.');
                 mysqli_select_db($db, 'cooking') or die(mysqli_error($db));
                 $query = 'SELECT 
-                                ingredient_name, ingredient_type, ingredient_image
+                                ingredient_id, ingredient_name, ingredient_type, ingredient_image
                             FROM ingredient
                             WHERE ingredient_type = \'SEAFOOD\'
                             ORDER BY ingredient_name';
@@ -211,16 +211,16 @@ include 'createDatabase.php';
                 while ($row = mysqli_fetch_array($AllIngredients)) {
                     extract($row);
                     echo "<div class=\"container\">
-                                <input type=\"checkbox\" class=\"selection\" id=$ingredient_name>
+                                <input type=\"checkbox\" class=\"selection\" name=$ingredient_id id=$ingredient_name>
                                 <label for=$ingredient_name id=\"label-checkbox\"><img src=$ingredient_image class=\"image-ingredient\">$ingredient_name</label>
                             </div>";
                 }
                 ?>
             </div>
         </div>
-        <button id="submit-button">Let's cook !</button>
+        <input type="submit" id="submit-button" value="Let's cook !">
 
-    </fieldset>
+    </form>
     </nav>
 </body>
 

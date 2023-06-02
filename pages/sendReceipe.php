@@ -26,6 +26,7 @@ while ($row = mysqli_fetch_array(($result))) {
 }
 $folder = "../receipes/";
 $file = $name.".jpg";
+echo $file;
 if (isset($_FILES['picture'])) {
     move_uploaded_file($_FILES['picture']['tmp_name'], $folder . $file);
 }
@@ -58,5 +59,5 @@ mysqli_query($db, $query) or die(mysqli_error($db));
 </head>
 
 <body>
-    <?//php include 'addReceipe.php'; ?>
+    <?php include 'addReceipe.php'; ?>
 </body>

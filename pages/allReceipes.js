@@ -1,4 +1,4 @@
-function showList() {
+/*function showList() {
     fetch("../data/receipes.json")
         .then(response => response.json())
         .then(data => createList(data))
@@ -50,4 +50,4 @@ function createList(data) {
         mainUL.appendChild(section);
     }
     document.body.appendChild(mainUL);
-}
+}*/
