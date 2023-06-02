@@ -2,7 +2,12 @@
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
-include 'createDatabase.php';
+if (!isset($_COOKIE["user"])) {
+    header('Location:connectionPage.php');
+    exit();
+} else {
+    include 'createDatabase.php';
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

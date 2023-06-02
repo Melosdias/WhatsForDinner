@@ -2,6 +2,10 @@
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
+if (!isset($_COOKIE["user"])) {
+    header('Location:connectionPage.php');
+    exit();
+}
 $db = mysqli_connect('localhost', 'root', '') or die('Unable to connect. Check your connection parameters.');
 mysqli_select_db($db, 'cooking') or die(mysqli_error($db));
 

@@ -1,5 +1,4 @@
 <?php
-echo 'Coucou';
 $db = mysqli_connect('localhost', 'root', '') or die ('Unable to connect. Check your connection parameters.');
 $query = 'CREATE DATABASE IF NOT EXISTS cooking';
 mysqli_query($db, $query) or die(mysqli_error($db));

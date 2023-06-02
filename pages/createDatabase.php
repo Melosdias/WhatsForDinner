@@ -35,6 +35,15 @@ $query = 'CREATE TABLE IF NOT EXISTS receipes (
     ENGINE=MyISAM';
 mysqli_query($db, $query) or die(mysqli_error($db));
 
+$query = 'CREATE TABLE IF NOT EXISTS favReceipes(
+            id          INTEGER UNSIGNED    NOT NULL AUTO_INCREMENT,
+            username    VARCHAR(255)        NOT NULL,
+            receipes    VARCHAR(255)        NOT NULL,
+            
+            PRIMARY KEY (id)
+            )
+            ENGINE=MyISAM';
+mysqli_query($db, $query) or die(mysqli_error($db));
 $query = 'INSERT IGNORE INTO ingredient
             (ingredient_id, ingredient_name, ingredient_type, ingredient_image)
         VALUES

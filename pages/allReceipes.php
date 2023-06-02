@@ -1,5 +1,11 @@
 <?php
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+if (!isset($_COOKIE["user"])) {
+    header('Location:connectionPage.php');
+    exit();
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,6 +32,9 @@ while ($row = mysqli_fetch_array($result)) {
     echo "<section id=\"$receipes_name\">
                     <aside id=\"$receipes_name\">
                         <img src=\"$receipes_image\" class=\"image-receipe\">
+                        <form action=\"addFav.php\" method=\"post\">
+                            <input type=\"submit\" value=\"Add to favorite\" name=\"$receipes_name\">
+                        </form>
                     </aside>
                     <article id=\"$receipes_name\">
                         <h2 class=\"receipe-name\">$receipes_name</h2>
