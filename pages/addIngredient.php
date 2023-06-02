@@ -15,16 +15,17 @@ session_start();
     <?php include 'sideMenu.php'; ?>
     <form action="sendIngredient.php" method="post" enctype="multipart/form-data">
         <legend>Add ingredients</legend>
-            Name : <input type="text" id="name" name="name" value="" />
+        Name : <input type="text" id="name" name="name" value="" />
         <p>Please select the type :
         </p>
         <div class="form" id="all-buttons">
             <div id="ingredients-buttons">
-                Chocolate, biscuit and sweet products<input type="checkbox" class="ingredient-button" id="sweet-product" name="SWEET-PRODUCT"
-                    value="Chocolate, biscuit and sweet products"> 
+                Chocolate, biscuit and sweet products<input type="checkbox" class="ingredient-button" id="sweet-product"
+                    name="SWEET-PRODUCT" value="Chocolate, biscuit and sweet products">
             </div>
             <div id="ingredients-buttons">
-               Vegetable <input type="checkbox" class="ingredient-button" id="vegetable" name="VEGETABLE" value="Vegetable">
+                Vegetable <input type="checkbox" class="ingredient-button" id="vegetable" name="VEGETABLE"
+                    value="Vegetable">
             </div>
             <div id="ingredients-buttons">
                 Fruits
@@ -36,7 +37,7 @@ session_start();
                     value="Eggs, cheese and dairy products">
             </div>
             <div id="ingredients-buttons">
-               Starchy food
+                Starchy food
                 <input type="checkbox" class="ingredient-button" name="STARCHY-FOOD" id="starchy-food"
                     value="Starchy food">
             </div>
@@ -76,16 +77,18 @@ session_start();
                             const image = document.createElement('img');
                             image.src = this.result;
                             image.id = "image";
-                            image.name= "image";
+                            image.name = "image";
                             imgPreview.appendChild(image);
                         });
                     }
                 }
             </script>
         </div>
-        <input type="submit" id="submit-button" value="Add ingredient">
+        <div class="div-submit-button">
+            <input type="submit" id="submit-button" value="Add ingredient">
+        </div>
     </form>
-  
+
 </body>
 
 </html>

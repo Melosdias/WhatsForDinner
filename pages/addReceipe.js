@@ -1,4 +1,4 @@
-function showList() {
+/*function showList() {
     console.log("showList start");
     fetch("../data/ingredient.json")
         .then(response => response.json())
@@ -42,7 +42,7 @@ function createList(data) {
     }
 
     createCollapsible();
-}
+}*/
 
 function createCollapsible() {
     var coll = document.getElementsByClassName("collapsible");

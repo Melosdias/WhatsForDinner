@@ -32,38 +32,38 @@ if (isset($_POST["MEAT"])) {
     $type = "MEAT";
 }
 if (isset($_FILES['image'])) {
-    $dossier;
+    $folder; 
     $file = $name . ".jpg";
     if ($type == "SWEET-PRODUCT") {
-        $dossier = "../ingredients/chocolatAndCo/";
+        $folder = "../ingredients/chocolatAndCo/";
     }
     if ($type == "VEGETABLE") {
-        $dossier = "../ingredients/vegetable/";
+        $folder = "../ingredients/vegetable/";
     }
     if ($type == "FRUITS") {
-        $dossier = "../ingredients/fruits/";
+        $folder = "../ingredients/fruits/";
     }
     if ($type == "DAIRY-PRODUCT") {
-        $dossier = "../ingredients/milk/";
+        $folder = "../ingredients/milk/";
     }
     if ($type == "STARCHY-FOOD") {
-        $dossier = "../ingredients/starchyFood/";
+        $folder = "../ingredients/starchyFood/";
     }
     if ($type == "CONDIMENT") {
-        $dossier = "../ingredients/herb/";
+        $folder = "../ingredients/herb/";
     }
     if ($type == "SEAFOOD") {
-        $dossier = "../ingredients/fish/";
+        $folder = "../ingredients/fish/";
     }
     if ($type == "MEAT") {
-        $dossier = "../ingredients/meat/";
+        $folder = "../ingredients/meat/";
     }
-    move_uploaded_file($_FILES['image']['tmp_name'], $dossier . $file);
+    move_uploaded_file($_FILES['image']['tmp_name'], $folder . $file);
 }
 $query = "INSERT IGNORE INTO ingredient
             (ingredient_name, ingredient_type, ingredient_image)
         VALUES
-            ('$name', '$type', '$dossier.$file')";
+            ('$name', '$type', '$folder$file')";
 
 mysqli_query($db, $query) or die(mysqli_error($db));
 ?>
@@ -81,5 +81,5 @@ mysqli_query($db, $query) or die(mysqli_error($db));
 </head>
 
 <body>
-    <?php include 'mainPage.php'; ?>
+    <?php include 'addIngredient.php'; ?>
 </body>

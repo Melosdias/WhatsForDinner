@@ -147,15 +147,13 @@ nav {
 /*#endregion*/
 
 /*#region fieldset*/
-fieldset {
+form {
     text-align: left;
     border: none;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
     font-size: larger;
-    display: flex;
-    flex-direction: column;
 }
 
 legend {
@@ -231,7 +229,63 @@ p{
 #submit-button:hover{
     background-color: #277D5C;
 }
-
+.container {
+    background-color:#2C8F69;
+    box-shadow: 0 0 25px rgba(17,1,68,0.08);
+    border-radius: 8px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+#label-checkbox{
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    color: white;
+}
+.selection {
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column-reverse;
+    grid-column: 1;
+}
+.selection:after{
+    position: absolute;
+    font-weight: 400;
+    content: "\f111";
+    font-size: 18px;
+    color: #2C8F69;
+    right: 10px;
+    top: -5px;
+}
+.selection:checked:after {
+    font-weight: 900;
+    content: "\f058";
+    color: #592B1B;
+}
+#img-ingredient {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0 ;
+    bottom: 0;
+    cursor: pointer;
+}
+#image {
+    width: 250px;
+    height: 150px;
+}
 /*#endregion*/
 #add-image{
     display: flex;

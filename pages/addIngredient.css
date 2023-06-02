@@ -154,6 +154,10 @@ legend {
 
 #submit-button:hover {
     background-color: #277D5C;
+    margin: auto;
+}
+.div-submit-button{
+    display:flex ;
 }
 
 #add-image{
