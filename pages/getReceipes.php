@@ -56,6 +56,9 @@ if (!isset($_COOKIE["user"])) {
         echo "<section id=\"$receipes_name\">
                     <aside id=\"$receipes_name\">
                         <img src=\"$receipes_image\" class=\"image-receipe\">
+                        <form action=\"addFav.php\" method=\"post\">
+                            <input type=\"submit\" id=\"fav-button\" value=\"Add to favorite\" name=\"$receipes_name\">
+                        </form>
                     </aside>
                     <article id=\"$receipes_name\">
                         <h2 class=\"receipe-name\">$receipes_name</h2>

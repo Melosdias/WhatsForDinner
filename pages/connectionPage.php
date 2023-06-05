@@ -29,7 +29,7 @@ include 'createDatabaseUser.php';
             <div>
                 Password : <input type="password" id="password" name="password" />
             </div>
-        <input type="submit" id="submit-button" value="Connexion">
+        <input type="submit" id="submit-button" value="Log in">
         </section>
     </form>
     <form action="createUserPage.php" id="second-form" method="post" enctype="multipart/form-data">

@@ -34,10 +34,50 @@ while ($row = mysqli_fetch_array($result)) {
                         ('{$user}', '{$receipesNumb}')";
             mysqli_query($db, $query) or die(mysqli_error($db));
         } else {
+            $query = "SELECT 
+                    username, receipes
+                FROM
+                    favReceipes
+                WHERE
+                    username = '{$user}'";
+            $result2 = mysqli_query($db, $query) or die(mysqli_error($db));
+            $result3 = mysqli_fetch_array($result2);
+            extract($result3);
+            $exist = false;
+            $numb = (string)$receipesNumb;
+            $j = 0;
+            for($i = 0 ; $i < strlen($receipes); $i++){
+                if($receipes[$i] == $numb[$j]){
+                    $j++;
+                    $k = 1;
+                    $equal = true;
+                    $exist = true;
+                    while($j < strlen($numb)){
+                        if($receipes[$i+$k] != $numb[$j])
+                        {
+                            $equal = false;
+                            $exist=false;
+                            break;
+                        }
+                        else{
+                            $j++;
+                            $k++;
+                        }
+                    }
+                    if($equal){
+                        break;
+                    }
+                    
+                }
+            }
+            if(!$exist){
+
+            
             $query = "UPDATE favReceipes
                     SET receipes = CONCAT(receipes, ',', '{$receipesNumb}')
                     WHERE username = '{$user}'";
             mysqli_query($db, $query) or die(mysqli_error($db));
+            }
         }
         break;
     }

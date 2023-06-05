@@ -1,10 +1,10 @@
 <nav>
     <div class="sidenav" id="sidenav">
         <a href="javascript:void(0);" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="allReceipes.php">All receipes</a>
-        <a href="addIngredient.php">Add ingredients</a>
-        <a href="addReceipe.php">Add receipes</a>
-        <a href="favReceipe.php">Favorite receipes</a>
+        <a href="allReceipes.php">All recipe</a>
+        <a href="addIngredient.php">Add ingredient</a>
+        <a href="addReceipe.php">Add recipe</a>
+        <a href="favReceipe.php">Favorite recipe</a>
     </div>
     <span onclick="openNav()" id="burger">&#9776;</span>
     <h1 onclick="mainPage()">What do we eat tonight?</h1>

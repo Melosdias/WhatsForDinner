@@ -126,7 +126,32 @@ nav {
         white-space: break-spaces;
     }
 
+    aside {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
     /*#endregion*/
+    #fav-button {
+        width: fit-content;
+        font-size: x-large;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background-color: #2C8F69;
+        color: white;
+        border-radius: 10px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #fav-button:hover {
+        background-color: #277D5C;
+    }
+
 }
 
 @media only screen and (min-width:480px) and (max-width:768px) {
@@ -199,6 +224,9 @@ nav {
     aside {
         margin-right: 5px;
         margin-left: 5px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
     }
 
     article {
@@ -237,6 +265,25 @@ nav {
     }
 
     /*#endregion*/
+    #fav-button {
+        width: fit-content;
+        font-size: x-large;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background-color: #2C8F69;
+        color: white;
+        border-radius: 10px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #fav-button:hover {
+        background-color: #277D5C;
+    }
+
 }
 
 @media only screen and (max-width:480px) {
@@ -309,6 +356,8 @@ nav {
     aside {
         margin-right: 5px;
         margin-left: 5px;
+        display: flex;
+        align-items: center;
     }
 
     article {
@@ -348,4 +397,23 @@ nav {
     }
 
     /*#endregion*/
+    #fav-button {
+        width: fit-content;
+        font-size: x-large;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background-color: #2C8F69;
+        color: white;
+        border-radius: 10px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #fav-button:hover {
+        background-color: #277D5C;
+    }
+
 }

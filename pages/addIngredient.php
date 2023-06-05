@@ -18,13 +18,13 @@ if (!isset($_COOKIE["user"])) {
 <body>
     <?php include 'sideMenu.php'; ?>
     <form action="sendIngredient.php" method="post" enctype="multipart/form-data">
-        <legend>Add ingredients</legend>
+        <legend>Add ingredient</legend>
         Name : <input type="text" id="name" name="name" value="" />
         <p>Please select the type :
         </p>
         <div class="form" id="all-buttons">
             <div id="ingredients-buttons">
-                Chocolate, biscuit and sweet products<input type="checkbox" class="ingredient-button" id="sweet-product"
+                Chocolate, biscuit and sweet product<input type="checkbox" class="ingredient-button" id="sweet-product"
                     name="SWEET-PRODUCT" value="Chocolate, biscuit and sweet products">
             </div>
             <div id="ingredients-buttons">
@@ -32,11 +32,11 @@ if (!isset($_COOKIE["user"])) {
                     value="Vegetable">
             </div>
             <div id="ingredients-buttons">
-                Fruits
+                Fruit
                 <input type="checkbox" class="ingredient-button" id="fruits" name="FRUITS" value="Fruits">
             </div>
             <div id="ingredients-buttons">
-                Eggs, cheese and dairy products
+                Egg, cheese and dairy products
                 <input type="checkbox" class="ingredient-button" id="dairy-product" name="DAIRY-PRODUCT"
                     value="Eggs, cheese and dairy products">
             </div>

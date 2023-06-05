@@ -22,10 +22,9 @@ if (empty(mysqli_fetch_array($result))) {
 
     $result = mysqli_query($db, $query);
     echo "<script>
-            alert(\"You have been sign up. Please login\");
+            alert(\"You have been sign up. Please log in.\");
+            window.location.href=\"connectionPage.php\";
             </script>";
-    header('Location:connectionPage.php');
-    exit();
 } else {
     echo "<script>
             alert(\"This username is not availaible\");

@@ -21,14 +21,14 @@ if (!isset($_COOKIE["user"])) {
 <body onload="createCollapsible()">
     <?php include 'sideMenu.php'; ?>
     <form action="sendReceipe.php" method="post" enctype="multipart/form-data">
-        <legend>Add receipe</legend>
-        First, write the name of the receipe :
+        <legend>Add recipe</legend>
+        First, write the name of the recipe :
         <input type="text" id="name" name="name" />
         <div id="ingredient-selection">
             <p>Now select the needed ingredients : </p>
             <div id="Chocolate, biscuit and sweet products" class="ingredient">
                 <button id="Chocolate, biscuit and sweet products" class="collapsible" type="button">
-                    Chocolate, biscuit and sweet products
+                    Chocolate, biscuit and sweet product
                 </button>
                 <div id="Chocolate, biscuit and sweet products" class="div-button">
                     <?php
@@ -78,7 +78,7 @@ if (!isset($_COOKIE["user"])) {
             </div>
             <div id="Fruits" class="ingredient">
                 <button id="Fruits" class="collapsible" type="button">
-                    Fruits
+                    Fruit
                 </button>
                 <div id="Fruits" class="div-button">
                     <?php
@@ -102,7 +102,7 @@ if (!isset($_COOKIE["user"])) {
             </div>
             <div id="Eggs, cheese and dairy products" class="ingredient">
                 <button id="Eggs, cheese and dairy products" class="collapsible" type="button">
-                    Eggs, cheese and dairy products
+                    Egg, cheese and dairy product
                 </button>
                 <div id="Eggs, cheese and dairy products" class="div-button">
                     <?php
@@ -241,7 +241,7 @@ if (!isset($_COOKIE["user"])) {
             <div id="img-preview"></div>
         </div>
         <div class="buttons">
-            <button id="submit-button">Let's cook !</button>
+            <button id="submit-button">Add it!</button>
         </div>
         <script>
             var nbStep = 2;

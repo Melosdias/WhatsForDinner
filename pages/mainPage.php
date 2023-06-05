@@ -28,10 +28,10 @@ if (!isset($_COOKIE["user"])) {
     include 'sideMenu.php';
     ?>
     <form action="getReceipes.php" method="post" enctype="mutlipart/form-data" id="fieldset">
-        <legend> Choose your ingredient </legend>
+        <legend> Choose your ingredients </legend>
         <div id="Chocolate, biscuit and sweet products" class="ingredient">
             <button id="Chocolate, biscuit and sweet products" class="collapsible" type="button">
-                Chocolate, biscuit and sweet products
+                Chocolate, biscuit and sweet product
             </button>
             <div id="Chocolate, biscuit and sweet products" class="div-button">
                 <?php
@@ -81,7 +81,7 @@ if (!isset($_COOKIE["user"])) {
         </div>
         <div id="Fruits" class="ingredient">
             <button id="Fruits" class="collapsible" type="button">
-                Fruits
+                Fruit
             </button>
             <div id="Fruits" class="div-button">
                 <?php
@@ -105,7 +105,7 @@ if (!isset($_COOKIE["user"])) {
         </div>
         <div id="Eggs, cheese and dairy products" class="ingredient">
             <button id="Eggs, cheese and dairy products" class="collapsible" type="button">
-                Eggs, cheese and dairy products
+                Egg, cheese and dairy product
             </button>
             <div id="Eggs, cheese and dairy products" class="div-button">
                 <?php
