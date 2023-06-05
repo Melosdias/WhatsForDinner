@@ -71,8 +71,6 @@ while ($row = mysqli_fetch_array($result)) {
                 }
             }
             if(!$exist){
-
-            
             $query = "UPDATE favReceipes
                     SET receipes = CONCAT(receipes, ',', '{$receipesNumb}')
                     WHERE username = '{$user}'";
@@ -82,3 +80,7 @@ while ($row = mysqli_fetch_array($result)) {
         break;
     }
 }
+    echo "<script>
+            window.location.href=\"favReceipe.php\";
+            </script>";
+?>    

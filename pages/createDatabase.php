@@ -56,12 +56,17 @@ $query = 'INSERT IGNORE INTO ingredient
             (7, "Beef", "MEAT", "../ingredients/meat/beef.jpg"),
             (8, "Pork", "MEAT", "../ingredients/meat/pork.jpg"),
             (9, "Chicken", "MEAT", "../ingredients/meat/chicken.jpg"),
-            (10, "Tuna", "SEAFOOD", "../ingredients/fish/tuna.jpg")';
+            (10, "Tuna", "SEAFOOD", "../ingredients/fish/tuna.jpg"),
+            (11, "Crème fraîche", "DAIRY-PRODUCT", "../ingredients/milk/creme-fraiche.jpg"),
+            (12, "Onion", "VEGETABLE", "../ingredients/vegetable/onion.jpg"),
+            (13, "Mushroom", "VEGETABLE", "../ingredients/vegetable/mushroom.jpg")';
 mysqli_query($db, $query) or die(mysqli_error($db));
 
 $query = 'INSERT IGNORE INTO receipes
             (receipes_id, receipes_name, receipes_ingredient, receipes_image, receipes_step1,receipes_step2,receipes_step3,receipes_step4,receipes_step5,receipes_step6,receipes_step7,receipes_step8,receipes_step9,receipes_step10)
         VALUES
-            (1, "omelette", "4", "../receipes/omelette.jpg","Season the beaten eggs well with salt and pepper. Heat the oil and butter in a non-stick frying pan over a medium-low heat until the butter has melted and is foaming.","Pour the eggs into the pan, tilt the pan ever so slightly from one side to another to allow the eggs to swirl and cover the surface of the pan completely. Let the mixture cook for about 20 seconds then scrape a line through the middle with a spatula.", "Tilt the pan again to allow it to fill back up with the runny egg. Repeat once or twice more until the egg has just set.", "At this point you can fill the omelette with whatever you like – some grated cheese, sliced ham, fresh herbs, sautéed mushrooms or smoked salmon all work well. Scatter the filling over the top of the omelette and fold gently in half with the spatula. Slide onto a plate to serve", "", "", "", "", "", "")';
+            (1, "omelette", "4", "../receipes/omelette.jpg","Season the beaten eggs well with salt and pepper. Heat the oil and butter in a non-stick frying pan over a medium-low heat until the butter has melted and is foaming.","Pour the eggs into the pan, tilt the pan ever so slightly from one side to another to allow the eggs to swirl and cover the surface of the pan completely. Let the mixture cook for about 20 seconds then scrape a line through the middle with a spatula.", "Tilt the pan again to allow it to fill back up with the runny egg. Repeat once or twice more until the egg has just set.", "At this point you can fill the omelette with whatever you like – some grated cheese, sliced ham, fresh herbs, sautéed mushrooms or smoked salmon all work well. Scatter the filling over the top of the omelette and fold gently in half with the spatula. Slide onto a plate to serve", "", "", "", "", "", ""),
+            (2, "creamy chicken", "9,11,12,13", "../receipes/creamy chicken.jpg","Dice the chicken cutlets.", "Dice the onion.", "Put a frying pan over a low heat with a drizzle of oil.","Peel the onion.", "Leave the oil to heat and fry the chicken cubes with the onion and mushrooms.", "When the meat is golden brown, add the crème fraîche and leave to bubble.", "", "", "", "")';
+
 mysqli_query($db, $query) or die(mysqli_error($db));
 ?>
