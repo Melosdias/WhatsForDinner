@@ -59,9 +59,10 @@ mysqli_query($db, $query) or die(mysqli_error($db));
     <link rel="shortcut icon" href="../imageWebsite/logov2.ico" />
     <script>
         alert("Your receipe has been sent thanks you");
+        window.location.href="mainPage.php";
     </script>
 </head>
 
 <body>
-    <?php include 'addReceipe.php'; ?>
+
 </body>

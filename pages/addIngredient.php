@@ -1,9 +1,12 @@
 <?php
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 if (!isset($_COOKIE["user"])) {
     header('Location:connectionPage.php');
     exit();
-};
+}
+;
 ?>
 <!DOCTYPE html>
 <html lang="en">

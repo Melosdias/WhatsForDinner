@@ -25,7 +25,7 @@ if (empty(mysqli_fetch_array($result))) {
     exit();
 } else {
     $_SESSION['authuser'] = 0;
-    setcookie("user", $username, time()+3600);
+    setcookie("user", $username);
     header('Location:mainPage.php');
     exit();
 }
